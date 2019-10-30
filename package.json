@@ -1,0 +1,36 @@
+{
+  "name": "creed",
+  "version": "0.0.001",
+  "description": "Lightweight intelligent Javascript Postgres ORM with auto-migrations, model validation, and use of knex query-building instead of normal ORM abstractions.  With arms wide open.",
+  "license": "MIT",
+  "repository": "lovetrax/creed",
+  "bin": {
+    "hello": "./src/sayName.js",
+    "main": "./index.js"
+  },
+  "main": "index.js",
+  "keywords": [
+    "npm",
+    "javascript",
+    "postgres",
+    "orm",
+    "migration",
+    "sql",
+    "knex"
+  ],
+  "scripts": {
+    "build": "rimraf build && babel src/ --copy-files --out-dir build --source-maps \"inline\"",
+    "lint": "eslint --fix \"src/**/*.js\" \"test/**/*.spec.js\"",
+    "test": "mocha \"test/**/*.spec.js\" --exit",
+    "verify": "npm run lint && nyc npm test"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "@babel/runtime": "7.4.4"
+  }
+}
